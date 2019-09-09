@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-final class TrackByGenreViewController: BaseViewController {
+final class TrackByGenreViewController: UIViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var trackTableView: UITableView!
@@ -23,6 +23,7 @@ final class TrackByGenreViewController: BaseViewController {
         return viewModel
     }()
     private let refreshControl = UIRefreshControl()
+    private let musicPlayer = MediaPlayerManager.getInstance()
     private var compositeDisposable = CompositeDisposable()
     private var tracks = [Track]()
 
@@ -113,10 +114,24 @@ extension TrackByGenreViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        musicPlayer.trackList = tracks
+        musicPlayer.index = indexPath.row
+        let streamUrl = musicPlayer.prepare(index: musicPlayer.index)
+        musicPlayer.play(url: streamUrl)
+        let miniPlayer = PlayerViewController.instantiate()
+        presentMiniPlayer(miniPlayer)
     }
 }
 
 // MARK: - StoryboardSceneBased
 extension TrackByGenreViewController: StoryboardSceneBased {
     static var sceneStoryboard = Storyboards.trackByGenre
+}
+
+extension TrackByGenreViewController: PresentDelegate {
+    func presentMiniPlayer(_ viewController: BaseViewController) {
+        popupBar.marqueeScrollEnabled = true
+        presentPopupBar(withContentViewController: viewController, animated: true, completion: nil)
+        viewController.configMiniPlayer()
+    }
 }

@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class PlayerViewController: UIViewController {
+class PlayerViewController: BaseViewController {
     
     // MARK: - Outlets
     @IBOutlet private weak var titleLabel: UILabel!

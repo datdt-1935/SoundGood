@@ -9,6 +9,10 @@
 import UIKit
 import LNPopupController
 
+protocol PresentDelegate: class {
+    func presentMiniPlayer(_ viewController: BaseViewController)
+}
+
 class BaseViewController: UIViewController {
 
     var musicPlayer = MediaPlayerManager.getInstance()
@@ -65,5 +69,22 @@ class BaseViewController: UIViewController {
     @objc func pauseSong() {
         musicPlayer.pause()
         popupItem.rightBarButtonItems = [playBarButton]
+    }
+
+    func playSelectedSong(from tracks: [Track], at index: Int) {
+        musicPlayer.trackList = tracks
+        musicPlayer.index = index
+        let streamUrl = musicPlayer.prepare(index: musicPlayer.index)
+        musicPlayer.play(url: streamUrl)
+        let miniPlayer = PlayerViewController.instantiate()
+        presentMiniPlayer(miniPlayer)
+    }
+}
+
+extension BaseViewController: PresentDelegate {
+    func presentMiniPlayer(_ viewController: BaseViewController) {
+        tabBarController?.popupBar.marqueeScrollEnabled = true
+        tabBarController?.presentPopupBar(withContentViewController: viewController, animated: true, completion: nil)
+        viewController.configMiniPlayer()
     }
 }
