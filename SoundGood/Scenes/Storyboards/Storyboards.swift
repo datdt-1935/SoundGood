@@ -19,4 +19,5 @@ enum Storyboards {
     static let playlist = UIStoryboard(name: "Playlist", bundle: nil)
     static let history = UIStoryboard(name: "History", bundle: nil)
     static let trackByGenre = UIStoryboard(name: "TrackByGenre", bundle: nil)
+    static let player = UIStoryboard(name: "Player", bundle: nil)
 }
