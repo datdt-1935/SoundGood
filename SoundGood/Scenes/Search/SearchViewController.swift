@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class SearchViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var trackSearchBar: UISearchBar!

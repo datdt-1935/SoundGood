@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-final class TrackByGenreViewController: UIViewController {
+final class TrackByGenreViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var trackTableView: UITableView!

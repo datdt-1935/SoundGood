@@ -45,7 +45,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gw0-er-UD0"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Home" id="2Rq-93-cEM"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home" selectedImage="home-highlighted" id="2Rq-93-cEM"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="segmentController" destination="ViU-YT-L9c" id="8Sy-Zf-0cr"/>
@@ -57,4 +57,8 @@
             <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="home" width="20" height="22"/>
+        <image name="home-highlighted" width="20" height="22"/>
+    </resources>
 </document>

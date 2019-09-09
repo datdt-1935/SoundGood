@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class FavoriteViewController: UIViewController {
+class FavoriteViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var favoriteImageView: UIImageView!

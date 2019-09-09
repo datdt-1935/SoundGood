@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class HomeViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var segmentController: UISegmentedControl!

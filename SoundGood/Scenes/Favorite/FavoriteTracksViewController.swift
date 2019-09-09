@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-final class FavoriteTracksViewController: UIViewController {
+final class FavoriteTracksViewController: BaseViewController {
 
     @IBOutlet weak var favoritesTableView: UITableView!
 

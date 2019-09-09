@@ -39,7 +39,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="L1l-4d-nE2"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Genre" id="lLz-rN-i5z"/>
+                    <tabBarItem key="tabBarItem" title="Genre" image="genre" selectedImage="genre-highlighted" id="lLz-rN-i5z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="genreSearchBar" destination="cGn-he-t3m" id="Z4Y-Oh-a8A"/>
@@ -51,4 +51,8 @@
             <point key="canvasLocation" x="37.681159420289859" y="18.75"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="genre" width="24" height="24"/>
+        <image name="genre-highlighted" width="24" height="24"/>
+    </resources>
 </document>

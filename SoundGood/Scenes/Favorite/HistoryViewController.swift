@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-class HistoryViewController: UIViewController {
+class HistoryViewController: BaseViewController {
 
     @IBOutlet private weak var historyTableView: UITableView!
 

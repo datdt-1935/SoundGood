@@ -122,7 +122,7 @@ All in one place.</string>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="GHv-LC-psn"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Favorite" id="wCq-Id-05z"/>
+                    <tabBarItem key="tabBarItem" title="Favorite" image="favorite" selectedImage="favorite-highlighted" id="wCq-Id-05z"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="favoriteImageView" destination="tE3-5J-55g" id="iJz-re-9A7"/>
@@ -139,5 +139,7 @@ All in one place.</string>
     <resources>
         <image name="chevron-right" width="12" height="12"/>
         <image name="chevron-right-highlighted" width="12" height="12"/>
+        <image name="favorite" width="24" height="24"/>
+        <image name="favorite-highlighted" width="24" height="24"/>
     </resources>
 </document>

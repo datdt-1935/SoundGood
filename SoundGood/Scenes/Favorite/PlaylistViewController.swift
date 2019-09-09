@@ -9,7 +9,7 @@
 import UIKit
 import Reusable
 
-final class PlaylistViewController: UIViewController {
+final class PlaylistViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet weak var playlistTableView: UITableView!

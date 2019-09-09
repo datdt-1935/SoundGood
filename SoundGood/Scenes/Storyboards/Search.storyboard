@@ -39,7 +39,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XkR-22-moX"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Search" id="pxY-A0-jz8"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="search" selectedImage="search-highlighted" id="pxY-A0-jz8"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="trackResultTableView" destination="hOB-bl-uwX" id="KRy-ba-NnV"/>
@@ -51,4 +51,8 @@
             <point key="canvasLocation" x="303" y="-459"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="search" width="20" height="20"/>
+        <image name="search-highlighted" width="20" height="20"/>
+    </resources>
 </document>

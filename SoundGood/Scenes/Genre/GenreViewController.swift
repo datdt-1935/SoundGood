@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GenreViewController: UIViewController {
+class GenreViewController: BaseViewController {
 
     // MARK: - Outlets
     @IBOutlet private weak var genreTableView: UITableView!
